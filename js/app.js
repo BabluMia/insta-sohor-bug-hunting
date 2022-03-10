@@ -14,9 +14,9 @@ const getReportedPosts = () => {
 const isLiked = (id) => {
   return likedPostsId?.length && !!likedPostsId.includes(id);
 };
-
+//  ------------------heart fixted------------ 
 const addToLiked = (id) => {
-  likedPostsId.plus(id);
+  likedPostsId.push(id);
   showPosts(posts);
 };
 
@@ -32,7 +32,7 @@ const displayContent = (text) => {
   // if(text.length < 30){
   //   return text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
   // }
-  // else{
+  // else if (text.length > 30){
   //   return text;
   // }
   return text.length < 30
