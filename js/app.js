@@ -29,6 +29,12 @@ const reportPost = (id) => {
 };
 
 const displayContent = (text) => {
+  // if(text.length < 30){
+  //   return text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
+  // }
+  // else{
+  //   return text;
+  // }
   return text.length < 30
     ? "text"
     : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
@@ -54,8 +60,15 @@ const switchTab = (id) => {
   }
 };
 
+// ------------------------user image bug fix in line number 75----------------------------
+// ------------------------userid and comment bug fix in line number 144 & 146----------------------
+
 const createPost = (post) => {
   const image = post.image;
+  const userId = post.comments[0].user;
+  const userComment = post.comments[0].text;
+  // console.log(post.comments[0].user);
+  console.log(post.comments[0].text);
   const div = document.createElement("article");
   div.classList.add("post");
   div.innerHTML = `
@@ -128,9 +141,9 @@ const createPost = (post) => {
                   <div class="post__description">
                     <small>
                       <a class="post__name--underline" href="#">
-                          ${post.comments?.user}
+                          ${userId}
                       </a>
-                      ${post.comments?.text}
+                      ${userComment}
                     </small>
                   </div>
                   <span class="post__date-time">30 minutes ago</span>
@@ -171,7 +184,7 @@ const loadPosts = async () => {
 
   posts = await data.json();
   showPosts(posts);
-  // console.log(posts[0].userImage);
+  
 };
 
 loadPosts();
