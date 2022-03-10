@@ -36,16 +36,19 @@ const displayContent = (text) => {
 const switchTab = (id) => {
   if (id === "posts") {
     document.getElementById("posts").style.display = "grid";
+    document.getElementById("question").style.display = "block";
     document.getElementById("liked").style.display = "none";
     document.getElementById("reported").style.display = "none";
   } else if (id === "liked") {
     document.getElementById("liked").style.display = "block";
+    document.getElementById("question").style.display = "none";
     document.getElementById("posts").style.display = "none";
     document.getElementById("reported").style.display = "none";
 
     displayLikedPosts();
   } else {
     document.getElementById("reported").style.display = "block";
+    document.getElementById("question").style.display = "none";
     document.getElementById("posts").style.display = "none";
     document.getElementById("liked").style.display = "none";
 
@@ -60,8 +63,7 @@ const createPost = (post) => {
   const image = post.image;
   const userId = post.comments[0].user;
   const userComment = post.comments[0].text;
-  // console.log(post.comments[0].user);
-  console.log(post.comments[0].text);
+  
   const div = document.createElement("article");
   div.classList.add("post");
   div.innerHTML = `
