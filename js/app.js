@@ -14,7 +14,7 @@ const getReportedPosts = () => {
 const isLiked = (id) => {
   return likedPostsId?.length && !!likedPostsId.includes(id);
 };
-//  ------------------heart fixted------------ 
+
 const addToLiked = (id) => {
   likedPostsId.push(id);
   showPosts(posts);
@@ -29,7 +29,6 @@ const reportPost = (id) => {
 };
 
 const displayContent = (text) => {
-  // ------------------text silce fixed here------------
   return text.length < 30 ? text : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
 };
 
@@ -56,8 +55,6 @@ const switchTab = (id) => {
   }
 };
 
-// ------------------------user image bug fix in line number 75----------------------------
-// ------------------------userid and comment bug fix in line number 144 & 146----------------------
 
 const createPost = (post) => {
   const image = post.image;
