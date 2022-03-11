@@ -73,7 +73,7 @@
             <div class="accordion-body">
               <p>
                 জাভাস্ক্রিপ্ট হলো সিঙ্গেল থ্রেটেড প্রোগ্রামিং ল্যাংগুয়েজ। এর মানে হলো জাভাস্ক্রিপ্ট একসাথে একাধিক কাজ
-                করতে পারে না একটা শেষ করে অন্যটা করে থাকে ।যখন আমার কোড লিখি শুধু লিখলেই হয় না কোড রান করানো লাগে। এই
+                করতে পারে না একটা শেষ করে অন্যটা করে থাকে ।যখন আমরা কোড লিখি শুধু লিখলেই হয় না কোড রান করানো লাগে। এই
                 কোড গুলো ব্রাউজারে রান করানো লাগে। প্রতিটি ব্রাউজারের জাভাস্ক্রিপ্ট এর ইঞ্জিন থাকে যার মাধ্যমে ব্রাউজারে
                 কোড রান হয়। গোগল ক্রোমের জাভাস্ক্রিপ্ট ইঞ্জিনের নাম হলো V8, ফায়ার ফক্সের স্পাইডার মানকি, সাফারির সাফারি।
                 এই জাভাস্ক্রিপ্ট ইন্জিনের মাধ্যমে আমরা আমাদের জাভাস্ক্রিপ্ট কোডের আউটপুট দেখতে পাই।জাভাস্ক্রিপ্ট কোড যখন
@@ -88,15 +88,15 @@
           <h2 class="accordion-header" id="flush-headingTwo">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-              How Does Javascript Event Loop work's??
+              How Does Javascript Event Loop Works??
             </button>
           </h2>
           <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
               <p>
-                জাভাস্ক্রিপ্ট synchronous, asynchronous এই দুই ভাবে কাজ করে থাকে। যখন অনেক গুলো function কল করা হয় আর
-                সেখানে কিছু API আর timeOut type থাকে যেগুলো নরমাল টাইম থেকে একটু বেশি সময় নেয় লোড হতে তখন মুলত EVENT
+                জাভাস্ক্রিপ্ট  SYNCHRONOUS,ASYNCHRONOUS  এই দুই ভাবে কাজ করে থাকে। যখন অনেক গুলো function কল করা হয় আর
+                সেখানে কিছু যদি API আর setTimeout() থাকে যেগুলো নরমাল টাইম থেকে একটু বেশি সময় নেয় লোড হতে তখন মুলত EVENT
                 LOOP এর কাজ শুরু। ENGNE এ CALL STACK এর মাধ্যমে Function এক্সিকিউট হয়। তাই CALL STACK এ প্রথমে একটা
                 main() কল হয় তারপর যে function আগে আছে তা CALL STACK এ আগে উঠে আসে। এখন function গুলোর মধ্যে যে
                 setTimeout(), API থাকে এই গুলো রান হতে টাইম লাগে তাই এই গুলো WEB API/ C++ API এর মধ্যে চলে যায় এবং ঐখানে
